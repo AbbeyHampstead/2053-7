@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2053-7</title>
+  
+  
+  
+  
+<style>
+body {font-family:system-ui;
+  color:white;
+  text-align:center;
+  font-size:25px;
+  background-image: url("https://marlerblog.com/files/2016/09/MultiColored-United-States-Map.png");
+  background-repeat:no-repeat; 
+  background-size: cover;
+  background-color: black;
+  position: relative;
+  height: 100vh;}
+
+#timerdiv{position:absolute;
+left:1400px;
+top:100px;}
+#scorediv{position:absolute;
+left:1400px;
+top:140px;}
+
+.correct {background: #7AFC7F;}
+.incorrect {background: #FF7C7C;}
+
+#WA{position:absolute;
+left:150px;
+top:60px;
+width:100px}
+#OR{position:absolute;
+left:120px;
+top:200px;
+width:100px}
+#CA{position:absolute;
+left:110px;
+top:600px;
+width:100px}
+#NV{position:absolute;
+left:180px;
+top:410px;
+width:100px}
+
+#ID{position:absolute;
+left:300px;
+top:270px;
+width:100px}
+#UT{position:absolute;
+left:360px;
+top:460px;
+width:100px}
+#AZ{position:absolute;
+left:320px;
+top:700px;
+width:100px}
+
+#MT{position:absolute;
+left:500px;
+top:140px;
+width:100px}
+#WY{position:absolute;
+left:520px;
+top:320px;
+width:100px}
+#CO{position:absolute;
+left:570px;
+top:510px;
+width:100px}
+#NM{position:absolute;
+left:530px;
+top:710px;
+width:100px}
+
+#ND{position:absolute;
+left:770px;
+top:140px;
+width:100px}
+#SD{position:absolute;
+left:770px;
+top:270px;
+width:100px}
+#NE{position:absolute;
+left:780px;
+top:410px;
+width:100px}
+#KS{position:absolute;
+left:820px;
+top:550px;
+width:100px}
+#OK{position:absolute;
+left:860px;
+top:680px;
+width:100px}
+#TX{position:absolute;
+left:780px;
+top:880px;
+width:100px}
+
+#MN{position:absolute;
+left:960px;
+top:190px;
+width:100px}
+#IA{position:absolute;
+left:990px;
+top:380px;
+width:100px}
+#MO{position:absolute;
+left:1030px;
+top:550px;
+width:100px}
+#AR{position:absolute;
+left:1040px;
+top:720px;
+width:100px}
+#LA{position:absolute;
+left:1065px;
+top:920px;
+width:100px}
+
+#WI{position:absolute;
+left:1100px;
+top:250px;
+width:100px}
+#IL{position:absolute;
+left:1140px;
+top:470px;
+width:100px}
+#MS{position:absolute;
+left:1155px;
+top:780px;
+width:90px}
+
+#MI{position:absolute;
+left:1295px;
+top:330px;
+width:90px}
+#IN{position:absolute;
+left:1258px;
+top:445px;
+width:80px}
+#KY{position:absolute;
+left:1285px;
+top:580px;
+width:100px}
+#TN{position:absolute;
+left:1260px;
+top:655px;
+width:100px}
+#AL{position:absolute;
+left:1270px;
+top:820px;
+width:100px}
+
+#OH{position:absolute;
+left:1360px;
+top:440px;
+width:100px}
+#WV{position:absolute;
+left:1450px;
+top:520px;
+width:80px}
+#GA{position:absolute;
+left:1400px;
+top:780px;
+width:100px}
+#FL{position:absolute;
+left:1520px;
+top:1020px;
+width:80px}
+
+#NY{position:absolute;
+left:1600px;
+top:280px;
+width:90px}
+#PA{position:absolute;
+left:1540px;
+top:380px;
+width:90px}
+#VA{position:absolute;
+left:1550px;
+top:530px;
+width:90px}
+#NC{position:absolute;
+left:1520px;
+top:630px;
+width:90px}
+#SC{position:absolute;
+left:1490px;
+top:710px;
+width:90px}
+
+#ME{position:absolute;
+left:1780px;
+top:120px;
+width:90px}
+#NH{position:absolute;
+left:1740px;
+top:220px;
+width:95px}
+#VT{position:absolute;
+left:1690px;
+top:180px;
+width:52px}
+#MA{position:absolute;
+left:1740px;
+top:270px;
+width:90px}
+#RI{position:absolute;
+left:1790px;
+top:315px;
+width:80px}
+#CT{position:absolute;
+left:1700px;
+top:305px;
+width:75px}
+#NJ{position:absolute;
+left:1680px;
+top:390px;
+width:70px}
+#DE{position:absolute;
+left:1670px;
+top:445px;
+width:60px}
+#MD{position:absolute;
+left:1570px;
+top:450px;
+width:70px}
+
+#AK{position:absolute;
+left:150px;
+top:980px;
+width:100px}
+#HI{position:absolute;
+left:500px;
+top:1100px;
+width:100px}
+
+#End{position:absolute;
+top:1022px;
+color: black;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <h1>United States Quiz</h1> 
+
+<div id="timerdiv">
+  Timer: <span id="thetimer">0</span>
+</div>
+
+<div id="scorediv">
+  Score: <span id="thescore">0</span>/50
+</div>
+
+<audio id="Correct_snd">
+<source src="https://abbeyhampstead.github.io/2053-7/CorrectBuzzer.m4a">
+  Your browser does not support the audio tag.
+</audio>
+
+<audio id="Incorrect_snd">
+  <source src="https://abbeyhampstead.github.io/2052-7/Not%20Correct.m4a" type="audio/mpeg">
+  Your browser does not support the audio tag
+</audio>
+
+<audio id="YAY">
+<source src="https://abbeyhampstead.github.io/2053-7/YAY.m4a" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+<h1 id="End">End</h1>
+ 
+<input id="WA" data-correct="washington"/>
+<input id="OR" data-correct="oregon"/>
+<input id="CA" data-correct="california"/>
+<input id="NV" data-correct="nevada"/>
+
+<input id="ID" data-correct="idaho"/>
+<input id="UT" data-correct="utah"/>
+<input id="AZ" data-correct="arizona"/>
+
+<input id="MT" data-correct="montana"/>
+<input id="WY" data-correct="wyoming"/>
+<input id="CO" data-correct="colorado"/>
+<input id="NM" data-correct="new mexico"/>
+
+<input id="ND" data-correct="north dakota"/>
+<input id="SD" data-correct="south dakota"/>
+<input id="NE" data-correct="nebraska"/>
+<input id="KS" data-correct="kansas"/>
+<input id="OK" data-correct="oklahoma"/>
+<input id="TX" data-correct="texas"/>
+
+<input id="MN" data-correct="minnesota"/>
+<input id="IA" data-correct="iowa"/>
+<input id="MO" data-correct="missouri"/>
+<input id="AR" data-correct="arkansas"/>
+<input id="LA" data-correct="Louisiana"/>
+
+<input id="WI" data-correct="wisconsin"/>
+<input id="IL" data-correct="illinois"/>
+<input id="MS" data-correct="mississippi"/>
+
+<input id="MI" data-correct="michigan"/>
+<input id="IN" data-correct="indiana"/>
+<input id="KY" data-correct="kentucky"/>
+<input id="TN" data-correct="tennessee"/>
+<input id="AL" data-correct="alabama"/>
+
+<input id="OH" data-correct="ohio"/>
+<input id="WV" data-correct="west virginia"/>
+<input id="GA" data-correct="georgia"/>
+<input id="FL" data-correct="florida"/>
+
+<input id="NY" data-correct="new york"/>
+<input id="PA" data-correct="pennsylvania"/>
+<input id="VA" data-correct="virginia"/>
+<input id="NC" data-correct="north carolina"/>
+<input id="SC" data-correct="south carolina"/>
+
+<input id="ME" data-correct="maine"/>
+<input id="NH" data-correct="new hampshire"/>
+<input id="VT" data-correct="vermont"/>
+<input id="MA" data-correct="massachusetts"/>
+<input id="RI" data-correct="rhode island"/>
+<input id="CT" data-correct="connecticut"/>
+<input id="NJ" data-correct="new jersey"/>
+<input id="DE" data-correct="delaware"/>
+<input id="MD" data-correct="maryland"/>
+
+<input id="AK" data-correct="alaska"/>
+<input id="HI" data-correct="hawaii"/>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js'></script>
+  
+      <script id="rendered-js" >
+let timer = 0; 
+function addSec(){
+  timer = timer + 1; 
+$("#thetimer").text(timer);}
+addSec();
+setInterval(addSec, 1000);
+
+let score = 0;
+function addScore(){
+score = score + 1;
+$("#thescore").text(score);}
+
+$("input").change(onChange)
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  correct = correct.toUpperCase();
+  response = response.toUpperCase();
+
+  console.log(correct, response)
+  if(correct == response){
+    $(this).removeClass('incorrect').addClass('correct') && $(playCorrect) && $(addScore);
+  } else{
+    $(this).addClass('incorrect') && $(playIncorrect);
+  }
+}
+
+let Correct = document.getElementById("Correct_snd")
+function playCorrect() {
+  Correct.play();
+}
+
+let Incorrect = document.getElementById("Incorrect_snd")
+function playIncorrect() {
+  Incorrect.play();
+}
+
+let allCorrect = 50;
+let endSound = document.getElementById("YAY");
+function playEndSound(){endSound.play();}
+if(score == allCorrect){ $(playEndSound)}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
